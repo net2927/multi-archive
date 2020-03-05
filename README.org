@@ -1,0 +1,23 @@
+#+TITLE: Accordion Tomcat/Wildfly 배포 시, multi context 배포
+
+* 배포 방법
+** jenkinsfile
+#+BEGIN_SRC groovy
+Library('accordion-lib') _
+accordionTemplate(logger: [level: "INFO"]) {
+    stageGetSource()
+
+    stageSourceBuild()
+
+    // !!
+    stageMultiArchiveDockerBuild()
+
+    stageDockerPush()
+
+    stageDeploy()
+}
+#+END_SRC
+
+** 접속 URL
+- ${SERVER_URL}/prod
+- ${SERVER_URL}/dev
