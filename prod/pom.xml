@@ -9,7 +9,7 @@
   </parent>
   <modelVersion>4.0.0</modelVersion>
 
-  <artifactId>service#prod</artifactId>
+  <artifactId>prod</artifactId>
   <packaging>war</packaging>
   <build>
     <finalName>service#${project.artifactId}</finalName>
